@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 import '../home_screen.dart';
+import 'allow_location.dart';
 
 class SplashScreenPage extends StatefulWidget {
   @override
@@ -21,7 +22,7 @@ class _SplashScreenPageState extends State<SplashScreenPage>
       Duration(seconds: 3),
       () => Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (BuildContext context) => HomePage(),
+          builder: (BuildContext context) => AllowLocationPage(),
         ),
       ),
     );
@@ -62,6 +63,8 @@ class _SplashScreenPageState extends State<SplashScreenPage>
         children: [
           Container(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 CenterWidget(
                   animation: _animation,
