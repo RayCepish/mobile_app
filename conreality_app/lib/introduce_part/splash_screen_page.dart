@@ -3,7 +3,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 import '../home_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'allow_location.dart';
+
 
 class SplashScreenPage extends StatefulWidget {
   @override
@@ -19,7 +22,7 @@ class _SplashScreenPageState extends State<SplashScreenPage>
   void initState() {
     super.initState();
     Timer(
-      Duration(seconds: 3),
+      Duration(seconds: 5),
       () => Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (BuildContext context) => AllowLocationPage(),
@@ -53,29 +56,33 @@ class _SplashScreenPageState extends State<SplashScreenPage>
     super.dispose();
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[800],
-      body: Stack(
-        children: [
-          Container(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+        backgroundColor: Colors.grey[800],
+        body: Center(
+          child: Container(
+            width: 160,
+            height: 160,
+            child: Stack(
               children: [
-                CenterWidget(
-                  animation: _animation,
+                Container(
+                  alignment: Alignment.center,
+                  child: CenterWidget(
+                    animation: _animation,
+                  ),
                 ),
-                SidesWidgte()
+                Align(alignment: Alignment.center, child: Container(
+                  width: 93,
+                  height: 121,
+                  child: SidesWidgte()))
               ],
             ),
-          )
-        ],
-      ),
-    );
+          ),
+        )
+        //   ],
+        // ),
+        );
   }
 }
 
@@ -88,13 +95,15 @@ class CenterWidget extends AnimatedWidget {
   Widget build(BuildContext context) {
     final animation = listenable as Animation<double>;
     return Transform.rotate(
-      angle: animation.value,
-      child: Container(
-        
-        padding: EdgeInsets.all(100),
-        child: Image(image: AssetImage("assets/images/side_logo_widget.png")),
-      ),
-    );
+        angle: animation.value,
+        child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              fit: BoxFit.fill,
+              image: AssetImage("assets/images/side_logo_widget.png"),
+            ),
+          ),
+        ));
   }
 }
 
@@ -104,7 +113,7 @@ class SidesWidgte extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          fit: BoxFit.cover,
+          fit: BoxFit.fill,
           image: AssetImage("assets/images/center_logo_widget.png"),
         ),
       ),
