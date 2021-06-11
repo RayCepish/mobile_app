@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:conreality_app/onb/onb.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 import '../home_screen.dart';
@@ -25,7 +26,7 @@ class _SplashScreenPageState extends State<SplashScreenPage>
       Duration(seconds: 5),
       () => Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (BuildContext context) => AllowLocationPage(),
+          builder: (BuildContext context) => OnBoardingPage(),
         ),
       ),
     );
