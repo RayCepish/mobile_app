@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   location: ^4.2.1
   flutter_screenutil: ^5.0.0+2
+  syncfusion_flutter_charts: ^19.1.67
 
 
 dev_dependencies:
@@ -57,6 +58,8 @@ flutter:
     - assets/images/firstPhoto.png
     - assets/images/secondPhoto.png
     - assets/images/thirdPhoto.png
+    - assets/images/Mask_group.png
+    - assets/images/area51.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

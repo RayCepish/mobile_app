@@ -1,3 +1,4 @@
+import 'package:conreality_app/profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'introduce_part/splash_screen_page.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     visualDensity: VisualDensity.adaptivePlatformDensity,
   
   ),
-      home: SplashScreenPage(),
+      home: ProfilePage(),
     );
   }
 }

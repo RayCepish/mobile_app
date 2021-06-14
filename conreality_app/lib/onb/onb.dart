@@ -36,9 +36,11 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
             child: PageView(
               controller: pageController,
               onPageChanged: (val) {
-                setState(() {
-                  currentIndex = val;
-                });
+                setState(
+                  () {
+                    currentIndex = val;
+                  },
+                );
               },
               children: [First(), Second(), Third()],
             ),
