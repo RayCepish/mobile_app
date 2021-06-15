@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../home_screen.dart';
-import 'details_legues.dart';
+import 'detailsLeague/details_legues.dart';
 
 class CardsOfLeageus extends StatelessWidget {
   final String titleText;
