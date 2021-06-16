@@ -1,7 +1,8 @@
 import 'dart:async';
 
-import 'package:conreality_app/onb/onb.dart';
 import 'package:flutter/material.dart';
+import 'package:reg_log_pages/onb/onb.dart';
+import 'package:reg_log_pages/reg_part/generated_plugin_registrant.dart';
 import 'dart:math' as math;
 import '../home_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
