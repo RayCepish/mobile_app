@@ -1,8 +1,10 @@
-import 'package:conreality_app/introduce_part/allow_location.dart';
-import 'package:conreality_app/onb/1.dart';
-import 'package:conreality_app/onb/2.dart';
-import 'package:conreality_app/onb/3.dart';
+
 import 'package:flutter/material.dart';
+import 'package:reg_log_pages/introduce_part/allow_location.dart';
+
+import '1.dart';
+import '2.dart';
+import '3.dart';
 
 class OnBoardingPage extends StatefulWidget {
   @override
@@ -169,9 +171,9 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                               ),
                             );
 
-                            // nextPage(
-                            //     duration: Duration(milliseconds: 15),
-                            //     curve: Curves.bounceIn);
+                            // // nextPage(
+                            // //     duration: Duration(milliseconds: 15),
+                            // //     curve: Curves.bounceIn);
                           },
                           child: Text(
                             "Finish",

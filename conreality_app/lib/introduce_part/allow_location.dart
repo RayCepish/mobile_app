@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:location/location.dart';
-
 import '../home_screen.dart';
 import 'enter_adress.dart';
+// import 'package:geocoding/geocoding.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:geolocator/geolocator.dart';
+import 'package:flutter/services.dart';
 
 class AllowLocationPage extends StatefulWidget {
   @override
@@ -10,38 +12,39 @@ class AllowLocationPage extends StatefulWidget {
 }
 
 class _AllowLocationPageState extends State<AllowLocationPage> {
-  Location location = new Location();
-  late bool _serviceEnabled;
-  late PermissionStatus _permissionGranted;
-  // ignore: unused_field
-  late LocationData _locationData;
-  // late bool _confirmNextPage;
-  // late bool _enterMannualy;
+  late Position _currentPosition;
+  late String _currentAddress;
 
-  @override
-  void initState() {
-    super.initState();
-    _checkLocationPermission();
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   _getCurrentLocation();
+  // }
+
+  void _getCurrentLocation() async {
+    await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high)
+        .then((Position position) {
+      setState(() {
+        _currentPosition = position;
+      });
+    });
   }
 
-  void _checkLocationPermission() async {
-    _serviceEnabled = await location.serviceEnabled();
-    if (!_serviceEnabled) {
-      _serviceEnabled = await location.requestService();
-      if (!_serviceEnabled) {
-        return;
-      }
-    }
-    _permissionGranted = await location.hasPermission();
-    if (_permissionGranted == PermissionStatus.denied) {
-      _permissionGranted = await location.requestPermission();
-      if (_permissionGranted != PermissionStatus.granted) {
-        return;
-      }
-    }
-    _locationData = await location.getLocation();
-  }
+  // _getAddressFromLatLng() async {
+  //   try {
+  //     List<Placemark> p = await geolocator.placemarkFromCoordinates(
+  //         _currentPosition.latitude, _currentPosition.longitude);
 
+  //     Placemark place = p[0];
+
+  //     setState(() {
+  //       _currentAddress =
+  //           "${place.locality}, ${place.postalCode}, ${place.country}";
+  //     });
+  //   } catch (e) {
+  // //     print(e);
+  //   }
+  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,7 +97,9 @@ class _AllowLocationPageState extends State<AllowLocationPage> {
                 width: 320,
                 height: 54,
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    _getCurrentLocation();
+                  },
                   child: Text("ALLOW LOCATION"),
                   shape: new RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(30.0),

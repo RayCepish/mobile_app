@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:reg_log_pages/reg_part/generated_plugin_registrant.dart';
 
 class ConfirmAdress extends StatefulWidget {
   @override
@@ -84,7 +85,14 @@ class _ConfirmAdressState extends State<ConfirmAdress> {
                 width: 320,
                 height: 54,
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                       Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SignUpForm(),
+                      ),
+                    );
+                  },
                   child: Text("CONFIRM"),
                   shape: new RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(30.0),
