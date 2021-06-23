@@ -67,6 +67,7 @@ flutter:
   - assets/images/reg_part/facebook.png
   - assets/images/reg_part/google.png
   - assets/images/reg_part/union.png
+  - assets/images/fingerprint1.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
