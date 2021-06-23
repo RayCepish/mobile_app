@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:reg_log_pages/reg_part/generated_plugin_registrant.dart';
-
+import 'package:reg_log_pages/registration/reg_page.dart';
+  
 class ConfirmAdress extends StatefulWidget {
   @override
   _ConfirmAdressState createState() => _ConfirmAdressState();
