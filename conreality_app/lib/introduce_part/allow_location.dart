@@ -3,6 +3,8 @@ import '../home_screen.dart';
 import 'enter_adress.dart';
 // import 'package:geocoding/geocoding.dart';
 // ignore: import_of_legacy_library_into_null_safe
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:geolocator/geolocator.dart';
 import 'package:flutter/services.dart';
 
@@ -54,16 +56,16 @@ class _AllowLocationPageState extends State<AllowLocationPage> {
           Column(
             children: [
               SizedBox(
-                height: 188,
+                height: 188.h,
               ),
               Row(
                 children: [
                   SizedBox(
-                    width: 133,
+                    width: 133.h,
                   ),
                   Container(
-                    height: 109,
-                    width: 109,
+                    height: 109.h,
+                    width: 109.w,
                     decoration: BoxDecoration(
                       color: Colors.transparent,
                       image: DecorationImage(
@@ -75,27 +77,27 @@ class _AllowLocationPageState extends State<AllowLocationPage> {
                 ],
               ),
               SizedBox(
-                height: 107,
+                height: 107.h,
               ),
               Container(
-                width: 274,
-                height: 81,
+                width: 274.w,
+                height: 81.h,
                 child: Text(
                   "Please let me see your location so you can effectively use the app's features for a fun game ",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w400,
-                    fontSize: 18,
+                    fontSize: 18.sp,
                   ),
                 ),
               ),
               SizedBox(
-                height: 50,
+                height: 50.h,
               ),
               Container(
-                width: 320,
-                height: 54,
+                width: 320.w,
+                height: 54.h,
                 child: RaisedButton(
                   onPressed: () {
                     _getCurrentLocation();
@@ -107,11 +109,11 @@ class _AllowLocationPageState extends State<AllowLocationPage> {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 20.h,
               ),
               Container(
-                width: 320,
-                height: 54,
+                width: 320.w,
+                height: 54.h,
                 child: FlatButton(
                   color: Colors.transparent,
                   onPressed: () {
@@ -129,7 +131,7 @@ class _AllowLocationPageState extends State<AllowLocationPage> {
                   shape: RoundedRectangleBorder(
                     side: BorderSide(
                         color: Colors.white,
-                        width: 1,
+                        width: 1.w,
                         style: BorderStyle.solid),
                     borderRadius: BorderRadius.circular(30),
                   ),

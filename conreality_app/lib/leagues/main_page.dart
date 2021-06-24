@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'cards_of_leageus.dart';
 
 class MainLeaguesPage extends StatefulWidget {
@@ -21,7 +21,7 @@ class _MainLeaguesPageState extends State<MainLeaguesPage> {
             children: [
               _title(),
               SizedBox(
-                height: 10,
+                height: 10.h,
               ),
               _subTitle(),
               CardsOfLeageus(
@@ -31,11 +31,11 @@ class _MainLeaguesPageState extends State<MainLeaguesPage> {
                 startDate: "02 Jun. 2021",
               ),
               SizedBox(
-                height: 30,
+                height: 30.h,
               ),
               _listOfAllLeagues(),
               SizedBox(
-                height: 10,
+                height: 10.h,
               ),
               CardsOfLeageus(
                 titleText: "Ukraine, Kyiv",
@@ -44,7 +44,7 @@ class _MainLeaguesPageState extends State<MainLeaguesPage> {
                 startDate: "12 Jun. 2021",
               ),
               SizedBox(
-                height: 20,
+                height: 20.h,
               ),
               CardsOfLeageus(
                 titleText: "USA, New York",
@@ -53,7 +53,7 @@ class _MainLeaguesPageState extends State<MainLeaguesPage> {
                 startDate: "08 Aug.2021",
               ),
               SizedBox(
-                height: 20,
+                height: 20.h,
               ),
               CardsOfLeageus(
                 titleText: "German, Berlin",
