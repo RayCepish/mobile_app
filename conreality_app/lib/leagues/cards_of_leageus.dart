@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../home_screen.dart';
 import 'detailsLeague/details_legues.dart';
@@ -17,7 +18,7 @@ class CardsOfLeageus extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20),
+      padding: EdgeInsets.only(left: 20.w),
       child: InkWell(
         onTap: () {
           Navigator.push(
@@ -28,8 +29,8 @@ class CardsOfLeageus extends StatelessWidget {
           );
         },
         child: Container(
-          width: 310,
-          height: 110,
+          width: 310.w,
+          height: 110.h,
           decoration: BoxDecoration(
             color: Colors.grey[800],
             borderRadius: BorderRadius.all(
@@ -43,8 +44,8 @@ class CardsOfLeageus extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 7, left: 9),
                     child: Container(
-                      width: 90,
-                      height: 90,
+                      width: 90.w,
+                      height: 90.h,
                       decoration: BoxDecoration(
                         color: Colors.grey,
                         image: DecorationImage(
@@ -62,29 +63,29 @@ class CardsOfLeageus extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 10, left: 20),
+                    padding: EdgeInsets.only(top: 10.h, left: 20.w),
                     child: Container(
-                      width: 100,
-                      height: 14,
+                      width: 100.w,
+                      height: 14.h,
                       child: Text(
                         titleText,
                         style: TextStyle(
                           color: Colors.grey[600],
-                          fontSize: 12,
+                          fontSize: 12.sp,
                         ),
                       ),
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 8, left: 17),
+                    padding: EdgeInsets.only(top: 8.h, left: 17.w),
                     child: Container(
-                      width: 190,
-                      height: 50,
+                      width: 190.w,
+                      height: 50.h,
                       child: Text(
                         nameOfLeague,
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 18.sp,
                         ),
                       ),
                     ),
@@ -92,7 +93,7 @@ class CardsOfLeageus extends StatelessWidget {
                   Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 16),
+                        padding: EdgeInsets.only(left: 16.w),
                         child: Row(
                           children: [
                             Container(
@@ -100,7 +101,7 @@ class CardsOfLeageus extends StatelessWidget {
                                 numberOfTeams,
                                 style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 14,
+                                  fontSize: 14.sp,
                                 ),
                               ),
                             ),
@@ -114,7 +115,7 @@ class CardsOfLeageus extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 10,
+                        width: 10.w,
                       ),
                       Row(
                         children: [
@@ -123,7 +124,7 @@ class CardsOfLeageus extends StatelessWidget {
                               "Start: ",
                               style: TextStyle(
                                 color: Colors.grey,
-                                fontSize: 14,
+                                fontSize: 14.sp,
                               ),
                             ),
                           ),
@@ -132,7 +133,7 @@ class CardsOfLeageus extends StatelessWidget {
                               "02 Jun.2021 ",
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 12,
+                                fontSize: 12.sp,
                               ),
                             ),
                           ),

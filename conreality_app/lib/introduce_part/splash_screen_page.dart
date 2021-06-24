@@ -2,12 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:reg_log_pages/onb/onb.dart';
- import 'dart:math' as math;
-import '../home_screen.dart';
+import 'dart:math' as math;
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'allow_location.dart';
-
 
 class SplashScreenPage extends StatefulWidget {
   @override
@@ -60,30 +56,28 @@ class _SplashScreenPageState extends State<SplashScreenPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.grey[800],
-        body: Center(
-          child: Container(
-            width: 160,
-            height: 160,
-            child: Stack(
-              children: [
-                Container(
-                  alignment: Alignment.center,
-                  child: CenterWidget(
-                    animation: _animation,
-                  ),
+      backgroundColor: Colors.grey[800],
+      body: Center(
+        child: Container(
+          width: 160.w,
+          height: 160.h,
+          child: Stack(
+            children: [
+              Container(
+                alignment: Alignment.center,
+                child: CenterWidget(
+                  animation: _animation,
                 ),
-                Align(alignment: Alignment.center, child: Container(
-                  width: 93,
-                  height: 121,
-                  child: SidesWidgte()))
-              ],
-            ),
+              ),
+              Align(
+                  alignment: Alignment.center,
+                  child: Container(
+                      width: 93.w, height: 121.h, child: SidesWidgte()))
+            ],
           ),
-        )
-        //   ],
-        // ),
-        );
+        ),
+      ),
+    );
   }
 }
 

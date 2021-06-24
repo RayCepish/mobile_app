@@ -17,16 +17,16 @@ class _ConfirmAdressState extends State<ConfirmAdress> {
           Column(
             children: [
               SizedBox(
-                height: 238,
+                height: 238.h,
               ),
               Row(
                 children: [
                   SizedBox(
-                    width: 136,
+                    width: 136.w,
                   ),
                   Container(
-                    height: 101,
-                    width: 101,
+                    height: 101.h,
+                    width: 101.w,
                     decoration: BoxDecoration(
                       color: Colors.transparent,
                       image: DecorationImage(
@@ -38,18 +38,18 @@ class _ConfirmAdressState extends State<ConfirmAdress> {
                 ],
               ),
               SizedBox(
-                height: 61,
+                height: 61.h,
               ),
               Container(
-                height: 65,
-                width: 335,
+                height: 65.h,
+                width: 335.w,
                 child: Column(
                   children: [
                     Row(
                       children: [
                         Container(
-                          height: 15,
-                          width: 61,
+                          height: 15.h,
+                          width: 61.w,
                           child: Text(
                             "ADDRESS",
                             style: TextStyle(color: Colors.grey),
@@ -58,10 +58,10 @@ class _ConfirmAdressState extends State<ConfirmAdress> {
                       ],
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 10.h,
                     ),
                     Container(
-                      height: 40,
+                      height: 40.h,
                       decoration: BoxDecoration(
                         color: Colors.grey,
                         borderRadius: BorderRadius.all(
@@ -79,11 +79,11 @@ class _ConfirmAdressState extends State<ConfirmAdress> {
                 ),
               ),
                SizedBox(
-                      height: 60,
+                      height: 60.h,
                     ),
               Container(
-                width: 320,
-                height: 54,
+                width: 320.w,
+                height: 54.h,
                 child: RaisedButton(
                   onPressed: () {
                        Navigator.push(

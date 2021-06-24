@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PageOfArenaTeam extends StatefulWidget {
   PageOfArenaTeam({Key? key}) : super(key: key);
@@ -20,12 +21,12 @@ class _PageOfArenaTeamState extends State<PageOfArenaTeam> {
             onPressed: () => Navigator.of(context).pop(),
           ),
           SizedBox(
-            width: 250,
+            width: 250.w,
           ),
           IconButton(
             icon: Icon(
               Icons.settings,
-              size: 27,
+              size: 27.sp,
             ),
             onPressed: () {},
           ),
@@ -38,7 +39,7 @@ class _PageOfArenaTeamState extends State<PageOfArenaTeam> {
           Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 107, top: 5),
+                padding: EdgeInsets.only(left: 107.w, top: 5.h),
                 child: Container(
                   width: 160,
                   height: 120,
@@ -52,28 +53,28 @@ class _PageOfArenaTeamState extends State<PageOfArenaTeam> {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 93, top: 180),
+            padding: EdgeInsets.only(left: 93.w, top: 180.h),
             child: Column(
               children: [
                 Container(
-                  width: 36,
-                  height: 16,
+                  width: 36.w,
+                  height: 16.h,
                   child:
                       Text("Team", style: TextStyle(color: Colors.grey[800])),
                 ),
                 Container(
-                  width: 188,
-                  height: 27,
+                  width: 188.w,
+                  height: 27.h,
                 ),
                 Row(
                   children: [
                     Container(
-                      width: 37,
-                      height: 22,
+                      width: 37.w,
+                      height: 22.h,
                     ),
                     Container(
-                      width: 32,
-                      height: 18,
+                      width: 32.w,
+                      height: 18.h,
                     ),
                   ],
                 ),
