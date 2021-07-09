@@ -4,15 +4,16 @@ class First extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.grey[900],
       body: Center(
         child: Column(
           children: [
             SizedBox(height: 40),
             Text(
-              "Battle area",
+              "Create your own Maps",
               style: TextStyle(
-                  fontSize: 20,
+                  fontFamily: "TTSquares-Italic",
+                  fontSize: 24,
                   color: Colors.white,
                   fontWeight: FontWeight.bold),
             ),
@@ -20,14 +21,20 @@ class First extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Container(
-                child: Image.asset('assets/images/firstPhoto.png'),
+                child: Image.asset('assets/images/prototype/Photo Frame.png'),
               ),
             ),
             SizedBox(height: 20),
-            Container(
-              child: Text(
-                "You will have a battle area on the map \n and with the helo of the application you \n will be able to find additional things for \n the battle",
-                style: TextStyle(color: Colors.white, fontSize: 16),
+            Padding(
+              padding: const EdgeInsets.only(left: 25, right: 25),
+              child: Container(
+                child: Text(
+                  "You can create your own custom maps for an arena, with unique objects, items and zones.",
+                  style: TextStyle(
+                      fontFamily: "TTSquares-Italic",
+                      color: Colors.white,
+                      fontSize: 14),
+                ),
               ),
             ),
           ],
