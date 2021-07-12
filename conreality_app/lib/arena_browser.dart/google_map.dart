@@ -9,6 +9,8 @@ import 'package:reg_log_pages/arena_browser.dart/tab_widget.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 import '../bottom_tabBar.dart';
+import 'collapsed_container.dart';
+import 'functions_for_google_map.dart';
 import 'mapStyle.dart';
 
 class GoogleMapScreen extends StatefulWidget {
@@ -27,16 +29,6 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
   Set<Marker> _markers = HashSet<Marker>();
   Set<Polygon> _polygons = HashSet<Polygon>();
   Set<Circle> _circles = HashSet<Circle>();
-  late GoogleMapController _googleMapController;
-  late BitmapDescriptor _markerIcon;
-  // ignore: deprecated_member_use
-  List<LatLng> polygonLatLngs = [];
-  late double radius;
-
-  //ids
-  int _polygonIdCounter = 1;
-  int _circleIdCounter = 1;
-  int _markerIdCounter = 1;
 
   // Type controllers
   bool _isPolygon = true; //Default
@@ -47,51 +39,6 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
   void initState() {
     super.initState();
     _locationData = widget.location;
-  }
-
-  // void _setMarkerIcon() async {
-  //   _markerIcon = await BitmapDescriptor.fromAssetImage(
-  //       ImageConfiguration(), 'assets/images/Ellipse81.png');
-  // }
-
-  void _setPolygon() {
-    final String polygonIdVal = 'polygon_id_$_polygonIdCounter';
-    _polygons.add(Polygon(
-      polygonId: PolygonId(polygonIdVal),
-      points: polygonLatLngs,
-      strokeWidth: 2,
-      strokeColor: Colors.yellow,
-      fillColor: Colors.yellow.withOpacity(0.15),
-    ));
-  }
-
-  void _setCircles(LatLng point) {
-    final String circleIdVal = 'circle_id_$_circleIdCounter';
-    _circleIdCounter++;
-    print(
-        'Circle | Latitude: ${point.latitude}  Longitude: ${point.longitude}  Radius: $radius');
-    _circles.add(Circle(
-        circleId: CircleId(circleIdVal),
-        center: point,
-        radius: radius,
-        fillColor: Colors.redAccent.withOpacity(0.5),
-        strokeWidth: 3,
-        strokeColor: Colors.redAccent));
-  }
-
-  void _setMarkers(LatLng point) {
-    final String markerIdVal = 'marker_id_$_markerIdCounter';
-    _markerIdCounter++;
-    setState(() {
-      print(
-          'Marker | Latitude: ${point.latitude}  Longitude: ${point.longitude}');
-      _markers.add(
-        Marker(
-          markerId: MarkerId(markerIdVal),
-          position: point,
-        ),
-      );
-    });
   }
 
   void _onMapCreated(GoogleMapController controller) {
@@ -113,42 +60,25 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
     );
   }
 
-  Widget _fabPolygon() {
-    return FloatingActionButton.extended(
-      onPressed: () {
-        //Remove the last point setted at the polygon
-        setState(() {
-          polygonLatLngs.removeLast();
-        });
-      },
-      icon: Icon(Icons.undo),
-      label: Text('Undo point'),
-      backgroundColor: Colors.orange,
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
-    final panelController = PanelController();
-    final double tabBarHeight = 80;
     return Scaffold(
       bottomNavigationBar: BottomTabBar(),
       floatingActionButton:
-          polygonLatLngs.length > 0 && _isPolygon ? _fabPolygon() : null,
+          polygonLatLngs.length > 0 && _isPolygon ? fabPolygon() : null,
       body: SlidingUpPanel(
-        // controller: panelController,
-
+        minHeight: 300,
+        maxHeight: 550,
         backdropEnabled: true,
         panel: Center(
-          child: Text("default"),
+          child: Text("More featureus"),
         ),
+        color: Colors.black,
         collapsed: Container(
           decoration: BoxDecoration(
-            color: Colors.grey[800],
+            color: Colors.black,
           ),
-          child: Center(
-            child: Text("Slide for more features"),
-          ),
+          child:CollapsedContainer(),
         ),
         body: Stack(
           children: [
@@ -171,18 +101,18 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
                 if (_isPolygon) {
                   setState(() {
                     polygonLatLngs.add(point);
-                    _setPolygon();
+                    setPolygon();
                   });
                 } else if (_isMarker) {
                   setState(() {
                     _markers.clear();
-                    _setMarkers(point);
+                    setMarkers(point);
                   });
                 } else if (_isCircle) {
                   setState(
                     () {
                       _circles.clear();
-                      _setCircles(point);
+                      setCircles(point);
                     },
                   );
                 }

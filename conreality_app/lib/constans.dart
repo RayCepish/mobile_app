@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 const backgroundArenaBrowserPageBottomAppBar = Color(0xFF000000);
 const isSelectedIconColor = Color(0xFFAA0000);
-const colorForBottomIcons = Color(0xFF6D6A6A);
+const colorForBottomIcons = Color(0xFF272525);
 Widget bottomAppBarTextForProfileButton = Text(
   "Profile",
   style: TextStyle(
