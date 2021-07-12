@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'constans.dart';
 
 class BottomTabBar extends StatefulWidget {
@@ -37,7 +37,7 @@ class _BottomTabBarState extends State<BottomTabBar> {
                   onPressed: () {
                     updateTabSelection(0);
                   },
-                  icon: Icon(Icons.panorama_fish_eye,
+                  icon: Icon(Icons.crop_square,
                       color: (selectedIndex == 0)
                           ? isSelectedIconColor
                           : colorForBottomIcons),
@@ -55,7 +55,7 @@ class _BottomTabBarState extends State<BottomTabBar> {
                     updateTabSelection(1);
                   },
                   icon: Icon(
-                    Icons.panorama_fish_eye,
+                    Icons.crop_square,
                     color: (selectedIndex == 1)
                         ? isSelectedIconColor
                         : colorForBottomIcons,
@@ -73,7 +73,7 @@ class _BottomTabBarState extends State<BottomTabBar> {
                     onPressed: () {
                       updateTabSelection(2);
                     },
-                    icon: Icon(Icons.panorama_fish_eye,
+                    icon: Icon(Icons.crop_square,
                         color: (selectedIndex == 2)
                             ? isSelectedIconColor
                             : colorForBottomIcons)),
@@ -89,7 +89,7 @@ class _BottomTabBarState extends State<BottomTabBar> {
                       onPressed: () {
                         updateTabSelection(3);
                       },
-                      icon: Icon(Icons.panorama_fish_eye,
+                      icon: Icon(Icons.crop_square  ,
                           color: (selectedIndex == 3)
                               ? isSelectedIconColor
                               : colorForBottomIcons))),
