@@ -34,6 +34,19 @@ dependencies:
   geocoding: ^1.0.5
   html: ^0.15.0
   syncfusion_flutter_gauges: ^18.2.44
+  flutter_google_maps: ^4.0.0
+  location: ^3.2.4
+  material_design_icons_flutter: ^4.0.5955
+  sliding_up_panel: ^2.0.0+1
+  carousel_slider: ^4.0.0
+  qr_flutter: ^4.0.0
+  toggle_switch: ^1.2.0
+
+  flutter_vector_icons: ^1.0.0
+  device_info: ^2.0.2
+  qr_code_scanner: ^0.5.2
+  barcode_scanner: ^1.1.0
+  url_launcher: ^5.7.10
 
 dev_dependencies:
   flutter_test:
@@ -54,21 +67,12 @@ flutter:
   assets:
   - assets/images/center_logo_widget.png
   - assets/images/side_logo_widget.png
-  - assets/images/Vector.png
-  - assets/images/map_logo.png
-  - assets/images/map_logo.png
-  - assets/images/firstPhoto.png
-  - assets/images/secondPhoto.png
-  - assets/images/thirdPhoto.png
-  - assets/images/Mask_group.png
-  - assets/images/area51.png
-  - assets/images/leagues/first.png
-  - assets/images/leagues/second.png
-  - assets/images/reg_part/apple.png
-  - assets/images/reg_part/facebook.png
-  - assets/images/reg_part/google.png
-  - assets/images/reg_part/union.png
-  - assets/images/fingerprint1.png
+  - assets/images/prototype/Photo Frame.png
+  - assets/images/prototype/splash.png
+  - assets/icons/Subtract (Stroke) (1).png
+  - assets/images/Portrait.png
+  - assets/images/prototype/second.png
+  - assets/images/prototype/clan_flag.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
@@ -80,15 +84,18 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: TTSquares-Italic
+      fonts:
+        - asset: assets/fonts/TTSquares-Italic.ttf
   #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
+          # style: italic
+    - family: Thin
+      fonts:
+        - asset: assets/fonts/TTSquares-Thin.ttf
+    - family: AppIcons
+      fonts:
+        - asset: assets/appIcons/MyFlutterApp.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
