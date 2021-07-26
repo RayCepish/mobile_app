@@ -1,12 +1,9 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:reg_log_pages/profile/profile.dart';
-import 'package:reg_log_pages/reg_part/signIn.dart';
+import 'package:reg_log_pages/pages/action/introduce_part/splash_screen_page.dart';
 
-import 'arena_browser.dart/google_map.dart';
-import 'introduce_part/splash_screen_page.dart';
-import 'leagues/main_page.dart';
+import 'bottom_tabBar.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +16,7 @@ class MyApp extends StatelessWidget {
       designSize: Size(375, 812),
       builder: () => MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: GoogleMapScreen(location: null,),
+        home:SplashScreenPage(),
       ),
     );
   }

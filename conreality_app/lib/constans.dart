@@ -11,6 +11,7 @@ Widget bottomAppBarTextForProfileButton = Text(
     fontSize: ScreenUtil().setSp(12),
     fontWeight: FontWeight.w500,
     height: ScreenUtil().setHeight(1.17),
+    fontFamily: "TTSquares-Italic"
   ),
   textAlign: TextAlign.center,
 );
@@ -21,6 +22,7 @@ Widget bottomAppBarTextForProfileButtonWithSelected = Text(
     fontSize: ScreenUtil().setSp(12),
     fontWeight: FontWeight.w500,
     height: ScreenUtil().setHeight(1.17),
+    fontFamily: "TTSquares-Italic"
   ),
   textAlign: TextAlign.center,
 );
@@ -31,6 +33,7 @@ Widget bottomAppBarTextForArenaButton = Text(
     fontSize: ScreenUtil().setSp(12),
     fontWeight: FontWeight.w500,
     height: ScreenUtil().setHeight(1.17),
+    fontFamily: "TTSquares-Italic"
   ),
   textAlign: TextAlign.center,
 );
@@ -42,36 +45,40 @@ Widget bottomAppBarTextForArenaButtonWithSelected  = Text(
     fontSize: ScreenUtil().setSp(12),
     fontWeight: FontWeight.w500,
     height: ScreenUtil().setHeight(1.17),
+    fontFamily: "TTSquares-Italic"
   ),
   textAlign: TextAlign.center,
 );
 Widget bottomAppBarTextForGamesButton = Text(
-  "Leagues",
+  "Action",
   style: TextStyle(
     color: Color(0xFF989898),
     fontSize: ScreenUtil().setSp(12),
     fontWeight: FontWeight.w500,
     height: ScreenUtil().setHeight(1.17),
+    fontFamily: "TTSquares-Italic"
   ),
   textAlign: TextAlign.center,
 );
 Widget bottomAppBarTextForGamesButtonWithSelected = Text(
-  "Leagues",
+  "Action",
   style: TextStyle(
     color: Color(0xFFAA0000),
     fontSize: ScreenUtil().setSp(12),
     fontWeight: FontWeight.w500,
     height: ScreenUtil().setHeight(1.17),
+    fontFamily: "TTSquares-Italic"
   ),
   textAlign: TextAlign.center,
 );
 Widget bottomAppBarTextForChatsButton = Text(
-  "QR Scanner",
+  "QR",
   style: TextStyle(
     color: Color(0xFF989898),
     fontSize: ScreenUtil().setSp(12),
     fontWeight: FontWeight.w500,
     height: ScreenUtil().setHeight(1.17),
+    fontFamily: "TTSquares-Italic"
   ),
   textAlign: TextAlign.center,
 );

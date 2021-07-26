@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:reg_log_pages/pages/action/action.dart';
+import 'package:reg_log_pages/pages/arena/google_map.dart';
+import 'package:reg_log_pages/pages/profile/userProfile.dart';
+import 'package:reg_log_pages/pages/qr/scan.dart';
 import 'constans.dart';
 
 class BottomTabBar extends StatefulWidget {
@@ -11,7 +14,12 @@ class BottomTabBar extends StatefulWidget {
 class _BottomTabBarState extends State<BottomTabBar> {
   int selectedIndex = 0;
   bool isPressed = true;
-
+  List<Widget> tabs = <Widget>[
+    UserProfile(),
+    GoogleMapScreen(location: null),
+    ActionMenuPage(),
+    ScannerQR(),
+  ];
   void updateTabSelection(int index) {
     setState(() {
       selectedIndex = index;
@@ -20,10 +28,9 @@ class _BottomTabBarState extends State<BottomTabBar> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: ScreenUtil().setWidth(374.74),
-      height: ScreenUtil().setHeight(73.6),
-      child: BottomNavigationBar(
+    return Scaffold(
+      body: tabs[selectedIndex],
+      bottomNavigationBar: BottomNavigationBar(
         unselectedItemColor: Colors.grey,
         type: BottomNavigationBarType.fixed,
         backgroundColor: backgroundArenaBrowserPageBottomAppBar,
@@ -83,23 +90,26 @@ class _BottomTabBarState extends State<BottomTabBar> {
                   : bottomAppBarTextForGamesButton),
           BottomNavigationBarItem(
               icon: Container(
-                  width: ScreenUtil().setWidth(37),
-                  height: ScreenUtil().setHeight(40),
-                  child: IconButton(
-                      onPressed: () {
-                        updateTabSelection(3);
-                      },
-                      icon: Icon(Icons.crop_square  ,
-                          color: (selectedIndex == 3)
-                              ? isSelectedIconColor
-                              : colorForBottomIcons))),
+                width: ScreenUtil().setWidth(37),
+                height: ScreenUtil().setHeight(40),
+                child: IconButton(
+                  onPressed: () {
+                    updateTabSelection(3);
+                  },
+                  icon: Icon(Icons.crop_square,
+                      color: (selectedIndex == 3)
+                          ? isSelectedIconColor
+                          : colorForBottomIcons),
+                ),
+              ),
               title: bottomAppBarTextForChatsButton),
         ],
         onTap: (index) {
-          // print("1");
-          setState(() {
-            selectedIndex = index;
-          });
+          setState(
+            () {
+              selectedIndex = index;
+            },
+          );
         },
       ),
     );

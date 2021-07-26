@@ -38,7 +38,15 @@ dependencies:
   location: ^3.2.4
   material_design_icons_flutter: ^4.0.5955
   sliding_up_panel: ^2.0.0+1
-  toggle_bar: ^1.0.0
+  carousel_slider: ^4.0.0
+  qr_flutter: ^4.0.0
+  toggle_switch: ^1.2.0
+
+  flutter_vector_icons: ^1.0.0
+  device_info: ^2.0.2
+  qr_code_scanner: ^0.5.2
+  barcode_scanner: ^1.1.0
+  url_launcher: ^5.7.10
 
 dev_dependencies:
   flutter_test:
@@ -59,23 +67,12 @@ flutter:
   assets:
   - assets/images/center_logo_widget.png
   - assets/images/side_logo_widget.png
-  - assets/images/Vector.png
-  - assets/images/map_logo.png
-  - assets/images/map_logo.png
-  - assets/images/firstPhoto.png
-  - assets/images/secondPhoto.png
-  - assets/images/thirdPhoto.png
-  - assets/images/Mask_group.png
-  - assets/images/area51.png
-  - assets/images/leagues/first.png
-  - assets/images/leagues/second.png
-  - assets/images/reg_part/apple.png
-  - assets/images/reg_part/facebook.png
-  - assets/images/reg_part/google.png
-  - assets/images/reg_part/union.png
-  - assets/images/fingerprint1.png
   - assets/images/prototype/Photo Frame.png
   - assets/images/prototype/splash.png
+  - assets/icons/Subtract (Stroke) (1).png
+  - assets/images/Portrait.png
+  - assets/images/prototype/second.png
+  - assets/images/prototype/clan_flag.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
